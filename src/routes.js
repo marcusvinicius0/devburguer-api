@@ -1,9 +1,7 @@
-const { Router } = require("express");
+import { Router } from "express";
 
 const routes = new Router();
 
-routes.get("/", (req, res) => {
-  return res.send({ message: "Server online." });
-})
+routes.get("/", (req, res) => res.send({ message: "Server online." }));
 
-module.exports = routes;
+export default routes;
