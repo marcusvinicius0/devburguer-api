@@ -32,7 +32,7 @@ class ProductController {
   async index(req, res) {
     
     const products = await Product.findAll();
-
+    console.log(req.userId);
     return res.json(products);
   }
 }
