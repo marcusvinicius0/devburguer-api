@@ -1,5 +1,6 @@
 import Sequelize from "sequelize";
 import mongoose from "mongoose";
+mongoose.set("strictQuery", false);
 
 import User from "../app/models/User";
 import Product from "../app/models/Product";
@@ -21,7 +22,6 @@ class Database {
   }
 
   mongo() {
-    mongoose.set("strictQuery", false)
     this.mongoConnection = mongoose.connect("mongodb://localhost:27017/devburguer",
       {
         useNewUrlParser: true,
